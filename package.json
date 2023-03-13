@@ -1,5 +1,5 @@
 {
-  "name": "discord-image_generation",
+  "name": "discord-bot-openai",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -7,7 +7,7 @@
     "test": "nodemon ./index.js"
   },
   "keywords": [],
-  "author": "",
+  "author": "sanfarfreezeco",
   "license": "ISC",
   "dependencies": {
     "@discordjs/builders": "^1.4.0",
