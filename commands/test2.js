@@ -25,6 +25,7 @@ function test2Reply() {
         if (interaction.commandName === 'test2') {
             let file = 'commands/chats/' + interaction.channel.id;
             let messages = [];
+            let messagesOri = [];
             async function gpt3Turbo() {
                 interaction.deferReply();
                 const input = interaction.options.getString('input');
@@ -39,19 +40,21 @@ function test2Reply() {
                 const reply = completion.data.choices[0].message;
                 messages.push(reply);
                 interaction.editReply('<@' + interaction.user.id + '>:\n' + input + '\n\n<@' + interaction.client.user.id + '>:\n' + reply.content);
-                const json = JSON.stringify(messages);
+                messagesOri = messagesOri.concat(messages);
+                const json = JSON.stringify(messagesOri);
                 fs.writeFileSync(file, json);
             }
             if (fs.existsSync(file)) {
                 const prevFile = fs.readFileSync(file);
                 const parseFile = JSON.parse(prevFile);
-                messages = parseFile;
+                messagesOri = parseFile.slice(0, -15);
+                messages = parseFile.slice(-15);
                 gpt3Turbo();
             } else {
-                messages = ([{
+                messages = [{
                     role: "system",
                     content: 'You are a helpful assistant'
-                }]);
+                }];
                 const json = JSON.stringify(messages);
                 fs.writeFileSync(file, json);
                 gpt3Turbo();
