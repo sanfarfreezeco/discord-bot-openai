@@ -27,7 +27,7 @@ function chatReply() {
             let messagesOri = [];
             async function gpt3Turbo() {
                 interaction.deferReply();
-                const input = interaction.options.getString('messages');
+                const input = interaction.options.getString('message');
                 messages.push({
                     role: "user",
                     content: input
