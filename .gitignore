@@ -1,0 +1,6 @@
+/.env
+/node_module/
+/.idea/
+/discord-image_generation.iml
+# Project exclude paths
+/node_modules/
