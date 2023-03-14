@@ -45,7 +45,7 @@
 5. Install this module
 
    ```shell
-   npm install @discordjs/builders discord.js dotenv nodemon openai
+   npm install @discordjs/builders @discordjs/voice discord.js dotenv nodemon openai
    ```
 
 6. Run this code using node.js
@@ -62,14 +62,19 @@
    - [x] `/image variation` Generate variation of image you send (only from web) (must be from `http://` or `https://`)
 - [x] `/color` Create a hex color code from your descrpition
 - [x] `/cook` Create cooking recipe from your food description
-- [ ] `/fix` Fix your code (not always correct)
+- [x] `/fix` Fix your code (not always correct)
    - [x] `/fix css` Fix your CSS code (only support autoprefix)
-   - [ ] `/fix cpp` Fix your C++ code (not always correct)
-   - [ ] `/fix javascript` Fix your JS code (not always correct)
-   - [ ] `/fix python` Fix your Python code (not always correct) 
+   - [x] `/fix cpp` Fix your C++ code (not always correct)
+   - [x] `/fix javascript` Fix your JS code (not always correct)
+   - [x] `/fix python` Fix your Python code (not always correct) 
 - [x] `/movie` Create a description from your movie name
-- [ ] `/translate` Translate (not always correct) (only support 5 language: English, Indonesian, Japanese, Chinese, Russian)
+- [x] `/translate` Translate (not always correct) (only support 5 language: English, Indonesian, Japanese, Chinese, Russian)
 - [x] `/chat` Chat with me (Ask anything) (Using GPT 3.5 Turbo Engine) (using `/chat` every message)
+- [ ] `/join` Join voice channel (in progress)
+- [ ] `/leave` Leave voice channel (in progress)
+- [ ] `/play` Play music (in progress)
+- [ ] `/pause` Pause music (in progress)
+- [ ] `/stop` Stop music (in progress)
 
 ---
 
