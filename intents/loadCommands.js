@@ -8,6 +8,7 @@ const { movie, movieReply } = require('../commands/davinci/movie');
 const { translate, translateReply } = require('../commands/davinci/translate');
 
 const { chat, chatReply } = require('../commands/gpt-3-5/chat');
+const { chat_gpt4, chatReplyGPT4 } = require('../commands/gpt4/chat-GPT4');
 
 const { test, testReply } = require('../commands/test');
 const { test2, test2Reply } = require('../commands/test2');
@@ -24,6 +25,7 @@ function reply() {
     translateReply();
 
     chatReply();
+    chatReplyGPT4();
 
     testReply();
     test2Reply();
@@ -41,6 +43,7 @@ const commands = [
     translate,
 
     chat,
+    chat_gpt4,
 
     test,
     test2,

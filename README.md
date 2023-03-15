@@ -70,6 +70,7 @@
 - [x] `/movie` Create a description from your movie name
 - [x] `/translate` Translate (not always correct) (only support 5 language: English, Indonesian, Japanese, Chinese, Russian)
 - [x] `/chat` Chat with me (Ask anything) (Using GPT 3.5 Turbo Engine) (using `/chat` every message)
+- [ ] `/chat_gpt4` Chat with me (Ask anything) (Using GPT-4 Engine (Closed Beta *Coming soon)) (using `/chat` every message)
 - [ ] `/join` Join voice channel (in progress)
 - [ ] `/leave` Leave voice channel (in progress)
 - [ ] `/play` Play music (in progress)
