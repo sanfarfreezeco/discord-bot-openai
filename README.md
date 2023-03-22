@@ -42,10 +42,10 @@
 
    Change the `<your_openai_api_token>` with your OpenAI API token
 
-5. Install this module
+5. Install module from `package.json`
 
    ```shell
-   npm install @discordjs/builders @discordjs/voice discord.js dotenv nodemon openai
+   npm install
    ```
 
 6. Run this code using node.js
@@ -55,6 +55,8 @@
    ```
 
 ## Features
+
+### OpenAI Core
 
 - [x] `/ping` Ping
 - [x] `/image` An Image command (using DALL•E) max generation is 10
@@ -71,6 +73,9 @@
 - [x] `/translate` Translate (not always correct) (only support 5 language: English, Indonesian, Japanese, Chinese, Russian)
 - [x] `/chat` Chat with me (Ask anything) (Using GPT 3.5 Turbo Engine) (using `/chat` every message)
 - [ ] `/chat_gpt4` Chat with me (Ask anything) (Using GPT-4 Engine (Limited Beta *Coming soon)) (using `/chat_gpt4` every message)
+
+### Additional
+
 - [ ] `/join` Join voice channel (in progress)
 - [ ] `/leave` Leave voice channel (in progress)
 - [ ] `/play` Play music (in progress)
@@ -78,6 +83,8 @@
 - [ ] `/stop` Stop music (in progress)
 
 ---
+
+### Test
 
 - [x] `/test`, `/test2`, `/test3` Test your own code
 
