@@ -10,6 +10,9 @@ const { translate, translateReply } = require('../commands/davinci/translate');
 const { chat, chatReply } = require('../commands/gpt-3-5/chat');
 const { chat_gpt4, chatReplyGPT4 } = require('../commands/gpt4/chat-GPT4');
 
+const { join, joinReply } = require('../commands/voice/join');
+const { leave, leaveReply } = require('../commands/voice/leave');
+
 const { test, testReply } = require('../commands/test');
 const { test2, test2Reply } = require('../commands/test2');
 const { test3, test3Reply } = require('../commands/test3');
@@ -26,6 +29,9 @@ function reply() {
 
     chatReply();
     chatReplyGPT4();
+
+    joinReply();
+    leaveReply();
 
     testReply();
     test2Reply();
@@ -45,9 +51,12 @@ const commands = [
     chat,
     chat_gpt4,
 
+    join,
+    leave,
+
     test,
     test2,
     test3
 ]
 
-module.exports = { commands, reply }
+module.exports = { commands, reply };

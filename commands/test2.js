@@ -7,7 +7,7 @@ const OPENAI_API = process.env.OPENAI_API;
 const configuration = new Configuration({ apiKey: OPENAI_API});
 const openai = new OpenAIApi(configuration);
 const fs = require('fs');
-const { joinVoiceChannel, getVoiceConnection, VoiceConnectionStatus, VoiceConnection,  } = require('@discordjs/voice');
+const { joinVoiceChannel, getVoiceConnection, VoiceConnectionStatus, VoiceConnection } = require('@discordjs/voice');
 const {Events} = require("discord.js");
 
 const input = new SlashCommandStringOption()
@@ -36,15 +36,15 @@ function test2Reply() {
     client.on('interactionCreate', (interaction) => {
         if (!interaction.isChatInputCommand()) return;
         if (interaction.commandName === 'test2') {
-            /*
-            const connection = joinVoiceChannel({
-                channelId: interaction.member.voice.channelId,
-                guildId: interaction.channel.guild.id,
-                adapterCreator: interaction.channel.guild.voiceAdapterCreator
-            });
-             */
-            console.log(interaction.member.voice.channel.id);
-            console.log(interaction.user.id);
+            if (!interaction.member.voice.channelId) {
+                console.log('err');
+            } else {
+                const connection = joinVoiceChannel({
+                    channelId: interaction.member.voice.channelId,
+                    guildId: interaction.channel.guild.id,
+                    adapterCreator: interaction.channel.guild.voiceAdapterCreator
+                });
+            }
         }
     });
 }
