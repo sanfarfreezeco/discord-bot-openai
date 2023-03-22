@@ -14,7 +14,9 @@ function leaveReply() {
         if (interaction.commandName === 'leave') {
             const connection = getVoiceConnection(interaction.channel.guild.id);
             if (!connection) {
-                interaction.reply('I\'m not connected to Voice Channel');
+                interaction.reply('I\'m already not connected to Voice Channel');
+            } if (connection.joinConfig.channelId !== interaction.member.voice.channelId) {
+                interaction.reply('You not connected to the same Voice Channel!');
             } else {
                 connection.destroy()
                 interaction.reply('Disconnected!');
