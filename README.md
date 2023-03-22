@@ -76,8 +76,8 @@
 
 ### Additional
 
-- [ ] `/join` Join voice channel (in progress)
-- [ ] `/leave` Leave voice channel (in progress)
+- [x] `/join` Join voice channel
+- [x] `/leave` Leave voice channel
 - [ ] `/play` Play music (in progress)
 - [ ] `/pause` Pause music (in progress)
 - [ ] `/stop` Stop music (in progress)
